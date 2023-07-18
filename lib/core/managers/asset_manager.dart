@@ -3,7 +3,14 @@ const String _imagesPath = '$_assetsPath/images';
 const String _iconsPath = '$_assetsPath/icons';
 
 class ImageManager {
-  static const String logo = '$_imagesPath/app_icon.png';
+  static const String appIcon = '$_imagesPath/app_icon.png';
+  static const String homeLogo = '$_imagesPath/home_logo.png';
+  static const String welcomeLogo = '$_imagesPath/welcome_logo.png';
+  static const String welcomeLogoSvg = '$_imagesPath/welcome_logo.svg';
+  static const String welcomeTopLeftImage = '$_imagesPath/welcome_top_left_image.svg';
+  static const String welcomeCenterImage = '$_imagesPath/welcome_center_image.svg';
+  static const String welcomeCenterImagePng = '$_imagesPath/welcome_center_image.png';
+  static const String welcomeBottomRightImage = '$_imagesPath/welcome_bottom_right_image.svg';
   static const String onBoarding1 = '$_imagesPath/on_boarding_1.png';
   static const String onBoarding2 = '$_imagesPath/on_boarding_2.png';
   static const String onBoarding3 = '$_imagesPath/on_boarding_3.png';

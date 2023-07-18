@@ -18,7 +18,7 @@ class SplashScreen extends StatelessWidget {
       },
       listener: (context, state) {
         if (state.splashEnded) {
-          Navigator.of(context).pushReplacementNamed(Routes.home);
+          Navigator.of(context).pushReplacementNamed(Routes.welcome);
         }
       },
       child: Scaffold(
@@ -35,7 +35,7 @@ class SplashScreen extends StatelessWidget {
         body: Center(
           child: SizedBox(
             child: Image.asset(
-              ImageManager.logo,
+              ImageManager.appIcon,
               height: .20.sh,
             ),
           ),
