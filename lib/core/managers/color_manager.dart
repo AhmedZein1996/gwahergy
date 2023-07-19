@@ -9,7 +9,7 @@ class ColorManager {
   static const primaryLight = Color(0xFF60dcd1);
   static const primaryDark = Color(0xFF007a72);
   static const onPrimary = Color(0xFF000000);
-  static const secondary = Color(0xFF757575);
+  static const secondary = Color(0xFF24687D);
   static const secondaryLight = Color(0xFFa4a4a4);
   static const onSecondary = Color(0xFFFFFFFF);
   static const background = Color(0xFFEEEEEE);

@@ -10,7 +10,7 @@ class ThemeManager {
   static ThemeData get lightTheme {
     return ThemeData(
       brightness: Brightness.light,
-      fontFamily: FontManager.tajawal,
+      fontFamily: FontManager.balooBhaijaan,
       scaffoldBackgroundColor: ColorManager.background,
       primaryColor: ColorManager.primary,
       primaryColorLight: ColorManager.primaryLight,

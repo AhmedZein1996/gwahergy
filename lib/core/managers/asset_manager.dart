@@ -4,7 +4,7 @@ const String _iconsPath = '$_assetsPath/icons';
 
 class ImageManager {
   static const String appIcon = '$_imagesPath/app_icon.png';
-  static const String homeLogo = '$_imagesPath/home_logo.png';
+  static const String homeLogo = '$_imagesPath/home_logo.svg';
   static const String welcomeLogo = '$_imagesPath/welcome_logo.png';
   static const String welcomeLogoSvg = '$_imagesPath/welcome_logo.svg';
   static const String welcomeTopLeftImage = '$_imagesPath/welcome_top_left_image.svg';
@@ -35,6 +35,6 @@ class IconManager {
 }
 
 class FontManager {
-  static const tajawal = 'Tajawal';
-  static const cairo = 'Cairo';
+  static const balooBhaijaan = 'BalooBhaijaan2';
+  static const almarai = 'Almarai';
 }

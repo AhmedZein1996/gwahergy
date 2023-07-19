@@ -10,9 +10,9 @@ part 'nav_bar_state.dart';
 class NavBarCubit extends Cubit<NavBarState> {
   final pages = {
     AppConstants.titles: [
-      'المدونه',
+      'المدونة',
       'الجواهرجي',
-      'الاكثر شهره',
+      'الاكثر شهرة',
     ],
     AppConstants.screens: const [
       PostsScreen(),

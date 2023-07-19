@@ -9,7 +9,7 @@ class HomeScreen extends StatelessWidget {
       onRefresh: () async {
         // TODO: call get products here
       },
-      child: Center(
+      child: const Center(
         child: Text('Home Screen'),
       ),
     );

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:gwahergy/core/managers/asset_manager.dart';
+import 'package:gwahergy/core/shared/widgets/custom_app_bar.dart';
 import 'package:gwahergy/home/presentation/widgets/bottom_nav_bar.dart';
+
 import '../../../core/constants/constants.dart';
 import '../../../core/shared/blocs/nav_bar/nav_bar_cubit.dart';
 
@@ -14,13 +17,15 @@ class HomeLayout extends StatelessWidget {
         return Stack(
           children: [
             Scaffold(
-              appBar: AppBar(
-                title: Text(
-                  context
-                      .read<NavBarCubit>()
-                      .pages[AppConstants.titles]![state.index] as String,
-                ),
-              ),
+              appBar: state.index == 1
+                  ? buildAppBarWithLogo(
+                      context,
+                      ImageManager.homeLogo,
+                    )
+                  : buildTransparentAppBarWithTitle(
+                      title: context
+                          .read<NavBarCubit>()
+                          .pages[AppConstants.titles]![state.index] as String),
               body: context
                   .read<NavBarCubit>()
                   .pages[AppConstants.screens]![state.index] as Widget,
