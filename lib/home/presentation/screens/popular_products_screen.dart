@@ -33,8 +33,6 @@ class PopularProductsScreen extends StatelessWidget {
               crossAxisSpacing: 10,
               mainAxisSpacing: 20,
             ),
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
             itemCount: 3,
             itemBuilder: (context, index) {
               return Card(
