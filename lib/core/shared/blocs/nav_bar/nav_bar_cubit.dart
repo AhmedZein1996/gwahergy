@@ -12,7 +12,7 @@ class NavBarCubit extends Cubit<NavBarState> {
     AppConstants.titles: [
       'المدونة',
       'الجواهرجي',
-      'الاكثر شهرة',
+      'الأكثر شهرة',
     ],
     AppConstants.screens: const [
       PostsScreen(),

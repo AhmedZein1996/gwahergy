@@ -25,7 +25,11 @@ class WelcomeForegroundWidget extends StatelessWidget {
           SizedBox(
             height: 50.h,
           ),
-          Image.asset(ImageManager.welcomeCenterImagePng),
+          Image.asset(
+            ImageManager.welcomeForegroundImagePng,
+            width: 233.w,
+            height: 335.h,
+          ),
           SizedBox(
             height: 30.h,
           ),

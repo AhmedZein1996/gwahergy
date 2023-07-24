@@ -11,6 +11,11 @@ class ImageManager {
   static const String welcomeCenterImage = '$_imagesPath/welcome_center_image.svg';
   static const String welcomeCenterImagePng = '$_imagesPath/welcome_center_image.png';
   static const String welcomeBottomRightImage = '$_imagesPath/welcome_bottom_right_image.svg';
+  static const String welcomeForegroundImage = '$_imagesPath/welcome_foreground_image.svg';
+  static const String welcomeForegroundImagePng = '$_imagesPath/welcome_foreground_image.png';
+    static const String appBackgroundImage = '$_imagesPath/app_background_image.svg';
+    static const String appBackgroundImagePng = '$_imagesPath/app_background_image.png';
+    static const String popularImage = '$_imagesPath/popular_1.png';
   static const String onBoarding1 = '$_imagesPath/on_boarding_1.png';
   static const String onBoarding2 = '$_imagesPath/on_boarding_2.png';
   static const String onBoarding3 = '$_imagesPath/on_boarding_3.png';

@@ -28,7 +28,7 @@ class WelcomeBackgroundWidget extends StatelessWidget {
           bottom: 0,
           right: 0,
           child: SizedBox(
-            height: .5.sh,
+            height: .52.sh,
             width: 1.sw,
             child: SvgPicture.asset(
               ImageManager.welcomeBottomRightImage,
