@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../managers/asset_manager.dart';
 import '../../managers/text_styles_manager.dart';
 
 buildAppBarWithLogo(BuildContext context, String logoPath) {
@@ -11,7 +12,7 @@ buildAppBarWithLogo(BuildContext context, String logoPath) {
     centerTitle: true,
     leading: IconButton(
       onPressed: () {},
-      icon: const Icon(Icons.search_outlined),
+      icon:  Image.asset(IconManager.searchPng)
     ),
     title: Padding(
       padding: EdgeInsets.only(top: 10.0.h),

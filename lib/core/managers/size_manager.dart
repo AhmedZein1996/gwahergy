@@ -8,6 +8,7 @@ class AppPadding {
   static const double padding12 = 12.0;
   static const double padding16 = 16.0;
   static const double padding20 = 20.0;
+  static const double padding25 = 25.0;
   static const double padding24 = 24.0;
 }
 

@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gwahergy/home/presentation/screens/popular_products_screen.dart';
-import 'package:gwahergy/posts/presentation/screens/posts_screen.dart';
+import '../../../../home/presentation/screens/popular_products_screen.dart';
+import '../../../../blogs/presentation/screens/blog_screen.dart';
 import '../../../../home/presentation/screens/home_screen.dart';
 import '../../../constants/constants.dart';
 
@@ -15,7 +15,7 @@ class NavBarCubit extends Cubit<NavBarState> {
       'الأكثر شهرة',
     ],
     AppConstants.screens: const [
-      PostsScreen(),
+      BlogScreen(),
       HomeScreen(),
       PopularProductsScreen(),
     ],

@@ -17,6 +17,7 @@ class HomeLayout extends StatelessWidget {
         return Stack(
           children: [
             Scaffold(
+              extendBody: true,
               appBar: state.index == 1
                   ? buildAppBarWithLogo(
                       context,

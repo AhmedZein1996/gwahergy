@@ -12,91 +12,97 @@ class PopularProductsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-          image: DecorationImage(
-        image: AssetImage(
-          ImageManager.appBackgroundImagePng,
-        ),
-        fit: BoxFit.cover,
-      )),
-      child: Scaffold(
-        backgroundColor: Colors.transparent,
-        body: Padding(
-          padding: const EdgeInsets.all(
-            AppPadding.padding10,
-          ),
-          child: GridView.builder(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              childAspectRatio: .85,
-              crossAxisSpacing: 10,
-              mainAxisSpacing: 20,
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+      body: Stack(
+        children: [
+          Positioned.fill(
+            child: SizedBox(
+              height: 1.sh,
+              width: 1.sw,
+              child: SvgPicture.asset(
+                ImageManager.popularProductsBackgroundImageSvg,
+                fit: BoxFit.fill,
+              ),
             ),
-            itemCount: 3,
-            itemBuilder: (context, index) {
-              return Card(
-                elevation: 5,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(
-                    20.r,
-                  ),
-                ),
-                child: Padding(
-                  padding: EdgeInsets.all(10.r),
-                  child: Column(
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(
-                          20.r,
-                        ),
-                        child: Image.asset(
-                          ImageManager.popularImage,
-                          height: 120.h,
-                          width: 154.w,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 10.h,
-                      ),
-                      SizedBox(
-                        height: 30.h,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              'غويشه',
-                            ),
-                            SvgPicture.asset(
-                              IconManager.popular,
-                            ),
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 10.h,
-                      ),
-                      SizedBox(
-                        height: 24.h,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const [
-                            Text(
-                              '15 جرام',
-                            ),
-                            Text(
-                              '34527 LE',
-                            ),
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              );
-            },
           ),
-        ),
+          Padding(
+            padding: const EdgeInsets.symmetric(
+                horizontal: AppPadding.padding10,
+                vertical: AppPadding.padding16
+            ),
+            child: GridView.builder(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                childAspectRatio: .85,
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 20,
+              ),
+              itemCount: 5,
+              itemBuilder: (context, index) {
+                return Card(
+                  elevation: 3,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(
+                      20.r,
+                    ),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(10.r),
+                    child: Column(
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(
+                            20.r,
+                          ),
+                          child: Image.asset(
+                            ImageManager.popularImage,
+                            height: 120.h,
+                            width: 154.w,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 10.h,
+                        ),
+                        SizedBox(
+                          height: 30.h,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'غويشه',
+                              ),
+                              SvgPicture.asset(
+                                IconManager.popular,
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: 10.h,
+                        ),
+                        SizedBox(
+                          height: 24.h,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: const [
+                              Text(
+                                '15 جرام',
+                              ),
+                              Text(
+                                '34527 LE',
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                );
+              },
+            ),
+          ),
+        ],
       ),
     );
   }

@@ -6,12 +6,10 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RefreshIndicator(
-      onRefresh: () async {
-        // TODO: call get products here
-      },
-      child: const Center(
-        child: Text('Home Screen'),
-      ),
-    );
+        onRefresh: () async {
+          // TODO: call get products here
+        },
+        child: Container(
+        ));
   }
 }

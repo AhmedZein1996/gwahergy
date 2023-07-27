@@ -13,9 +13,13 @@ class ImageManager {
   static const String welcomeBottomRightImage = '$_imagesPath/welcome_bottom_right_image.svg';
   static const String welcomeForegroundImage = '$_imagesPath/welcome_foreground_image.svg';
   static const String welcomeForegroundImagePng = '$_imagesPath/welcome_foreground_image.png';
-    static const String appBackgroundImage = '$_imagesPath/app_background_image.svg';
-    static const String appBackgroundImagePng = '$_imagesPath/app_background_image.png';
-    static const String popularImage = '$_imagesPath/popular_1.png';
+  static const String appBackgroundImage = '$_imagesPath/app_background_image.svg';
+  static const String popularProductsBackgroundImagePng = '$_imagesPath/popular_products_background_image.png';
+  static const String popularProductsBackgroundImageSvg = '$_imagesPath/popular_products_background_image.svg';
+  static const String blogBackgroundImagePng = '$_imagesPath/blog_background_image.png';
+  static const String blogBackgroundImageSvg = '$_imagesPath/blog_backgpound_image.svg';
+  static const String popularImage = '$_imagesPath/popular_1.png';
+  static const String blogImage = '$_imagesPath/blog_image.png';
   static const String onBoarding1 = '$_imagesPath/on_boarding_1.png';
   static const String onBoarding2 = '$_imagesPath/on_boarding_2.png';
   static const String onBoarding3 = '$_imagesPath/on_boarding_3.png';
@@ -37,6 +41,8 @@ class IconManager {
   static const String home = '$_iconsPath/home_icon.svg';
   static const String popular = '$_iconsPath/popular_icon.svg';
   static const String blog = '$_iconsPath/blog_icon.svg';
+  static const String search = '$_iconsPath/search_icon.svg';
+  static const String searchPng = '$_iconsPath/search_icon.png';
 }
 
 class FontManager {
