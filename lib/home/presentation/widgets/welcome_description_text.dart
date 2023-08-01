@@ -14,13 +14,16 @@ class WelcomeDescriptionText extends StatelessWidget {
         Padding(
           padding: EdgeInsets.only(left: 22.w),
           child: const DecoratedBox(
-            decoration: BoxDecoration(boxShadow: [
-              BoxShadow(
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
                   color: Colors.white,
                   offset: Offset(0, -2),
-                  blurRadius:20,
-                  spreadRadius: 7)
-            ]),
+                  blurRadius: 20,
+                  spreadRadius: 7,
+                ),
+              ],
+            ),
             child: Icon(
               Icons.diamond_outlined,
               color: ColorManager.white,
@@ -30,7 +33,7 @@ class WelcomeDescriptionText extends StatelessWidget {
         ),
         Text(
           'تألقى بأناقة',
-          style: TextStyleManager.yellow_24W400.copyWith(
+          style: TextStyleManager.yellow_24ALMARAI.copyWith(
             height: .15,
           ),
         ),
@@ -39,7 +42,7 @@ class WelcomeDescriptionText extends StatelessWidget {
         ),
         Text(
           'مجموعاتنا الفريدة من',
-          style: TextStyleManager.yellow_24W400,
+          style: TextStyleManager.yellow_24ALMARAI,
         ),
         SizedBox(
           height: 20.h,
@@ -49,19 +52,18 @@ class WelcomeDescriptionText extends StatelessWidget {
           children: [
             Text(
               'المجوهرات',
-              style: TextStyleManager.white_24W400,
+              style: TextStyleManager.white_24ALMARAI,
             ),
             SizedBox(
               width: 5.w,
             ),
             Text(
               'الراقية',
-              style: TextStyleManager.yellow_24W400,
+              style: TextStyleManager.yellow_24ALMARAI,
             ),
           ],
         ),
       ],
-
     );
   }
 }

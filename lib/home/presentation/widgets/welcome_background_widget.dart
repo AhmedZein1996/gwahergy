@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../../core/managers/asset_manager.dart';
-import '../../../core/managers/color_manager.dart';
 
 class WelcomeBackgroundWidget extends StatelessWidget {
   const WelcomeBackgroundWidget({super.key});
@@ -39,14 +38,9 @@ class WelcomeBackgroundWidget extends StatelessWidget {
         ClipRect(
           child: BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 25.0, sigmaY: 25.0),
-            child: Container(
+            child: SizedBox(
               width: 1.sw,
               height: 1.sh,
-              decoration: BoxDecoration(
-                color: ColorManager.secondary.withOpacity(
-                  0.0,
-                ),
-              ),
             ),
           ),
         ),

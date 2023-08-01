@@ -80,6 +80,12 @@ class TextStyleManager {
       color: ColorManager.black,
       fontFamily: FontManager.balooBhaijaan);
 
+  static final TextStyle black_24ALMARAI = TextStyle(
+      fontSize: 24.sp,
+      color: ColorManager.black,
+      fontWeight: FontWeight.w400,
+      fontFamily: FontManager.almarai);
+
 //black bold
   static final TextStyle black_12BOLD = TextStyle(
       fontWeight: FontWeight.bold,
@@ -215,7 +221,7 @@ class TextStyleManager {
       color: ColorManager.white,
       fontWeight: FontWeight.bold,
       fontFamily: FontManager.balooBhaijaan);
-  static final TextStyle white_24W400 = TextStyle(
+  static final TextStyle white_24ALMARAI = TextStyle(
       fontSize: 24.sp,
       color: ColorManager.white,
       fontWeight: FontWeight.w400,
@@ -272,7 +278,7 @@ class TextStyleManager {
       fontFamily: FontManager.balooBhaijaan);
 
 // yellow style
-  static final TextStyle yellow_24W400 = TextStyle(
+  static final TextStyle yellow_24ALMARAI = TextStyle(
       fontSize: 24.sp,
       color: ColorManager.primary,
       fontFamily: FontManager.almarai,

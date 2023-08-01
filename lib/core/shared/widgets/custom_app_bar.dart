@@ -12,20 +12,27 @@ buildAppBarWithLogo(BuildContext context, String logoPath) {
     centerTitle: true,
     leading: IconButton(
       onPressed: () {},
-      icon:  Image.asset(IconManager.searchPng)
+      icon: const Icon(
+        Icons.menu_outlined,
+        size: 35,
+      ),
     ),
     title: Padding(
-      padding: EdgeInsets.only(top: 10.0.h),
+      padding: const EdgeInsets.only(top: 5.0),
       child: SvgPicture.asset(
         logoPath,
-        width: 90,
-        height: 45,
+        width: 140.w,
+        height: 35.h,
       ),
     ),
     actions: [
       IconButton(
         onPressed: () {},
-        icon: const Icon(Icons.menu_outlined),
+        icon: Image.asset(
+          IconManager.searchPng,
+          width: 35,
+          height: 35,
+        ),
       ),
     ],
   );
