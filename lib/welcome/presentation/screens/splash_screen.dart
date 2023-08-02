@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gwahergy/home/presentation/blocs/splash/splash_cubit.dart';
 import '../../../../core/managers/color_manager.dart';
 import '../../../core/managers/asset_manager.dart';
 import '../../../core/managers/route_manager.dart';
+import '../blocs/splash/splash_cubit.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}) : super(key: key);

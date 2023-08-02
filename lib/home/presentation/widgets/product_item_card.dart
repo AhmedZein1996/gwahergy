@@ -3,12 +3,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../core/managers/asset_manager.dart';
+import '../../domain/entities/product/product_entity.dart';
 
 
 class ProductItemCard extends StatelessWidget {
-  final Color backgroundColor;
+  final Color? backgroundColor;
+  final ProductEntity product;
   const ProductItemCard({
     this.backgroundColor = Colors.white,
+   required this.product,
     super.key,
   });
 
@@ -31,7 +34,7 @@ class ProductItemCard extends StatelessWidget {
                 20.r,
               ),
               child: Image.asset(
-                ImageManager.popularImage,
+                product.imgUrl,
                 height: 120.h,
                 width: 154.w,
               ),
@@ -44,8 +47,8 @@ class ProductItemCard extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
-                    'غويشه',
+                  Text(
+                    product.title,
                   ),
                   SvgPicture.asset(
                     IconManager.popular,
@@ -58,14 +61,14 @@ class ProductItemCard extends StatelessWidget {
             ),
             SizedBox(
               height: 24.h,
-              child: const Row(
+              child:  Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    '15 جرام',
+                    '${product.weight} جرام',
                   ),
                   Text(
-                    '34527 LE',
+                    '${product.price} LE',
                   ),
                 ],
               ),

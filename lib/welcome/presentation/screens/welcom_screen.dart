@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:gwahergy/home/presentation/widgets/welcome_background_widget.dart';
 
 import '../../../core/managers/color_manager.dart';
+import '../widgets/welcome_background_widget.dart';
 import '../widgets/welcome_foreground_widget.dart';
 
 class WelcomeScreen extends StatelessWidget {

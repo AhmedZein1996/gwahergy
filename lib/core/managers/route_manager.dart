@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gwahergy/home/presentation/screens/welcom_screen.dart';
-
-import '../../home/presentation/blocs/splash/splash_cubit.dart';
 import '../../home/presentation/screens/home_layout.dart';
-import '../../home/presentation/screens/splash_screen.dart';
+import '../../welcome/presentation/blocs/splash/splash_cubit.dart';
+import '../../welcome/presentation/screens/splash_screen.dart';
+import '../../welcome/presentation/screens/welcom_screen.dart';
 import '../services/services.dart';
 import '../shared/blocs/nav_bar/nav_bar_cubit.dart';
 
@@ -12,7 +11,11 @@ class Routes {
   static const String splash = '/';
   static const String welcome = '/welcome';
   static const String home = '/home';
-  static const String post = '/post';
+  static const String blog = '/blog';
+  static const String popularProduct = '/popularProduct';
+  static const String categories = '/categories';
+  static const String currency = '/currency';
+  static const String contactUs = '/contactUs';
 }
 
 class RouteGenerator {

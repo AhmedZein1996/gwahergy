@@ -1,6 +1,6 @@
 import 'package:get_it/get_it.dart';
 
-import '../../home/presentation/blocs/splash/splash_cubit.dart';
+import '../../welcome/presentation/blocs/splash/splash_cubit.dart';
 import '../shared/blocs/nav_bar/nav_bar_cubit.dart';
 
 final sl = GetIt.instance;
@@ -35,13 +35,12 @@ Future<void> initServices() async {
   //   () => GetPostsUseCase(sl()),
   // );
 
-
   // blocs
   sl.registerLazySingleton(
     () => SplashCubit(),
   );
   sl.registerLazySingleton(
-        () => NavBarCubit(),
+    () => NavBarCubit(),
   );
   // sl.registerLazySingleton(
   //   () => PostCubit(

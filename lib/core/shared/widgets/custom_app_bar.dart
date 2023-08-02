@@ -10,11 +10,15 @@ buildAppBarWithLogo(BuildContext context, String logoPath) {
     backgroundColor: Colors.transparent,
     elevation: 0,
     centerTitle: true,
-    leading: IconButton(
-      onPressed: () {},
-      icon: const Icon(
-        Icons.menu_outlined,
-        size: 35,
+    leading:
+    Builder(
+      builder: (context) =>
+          IconButton(
+        onPressed: () => Scaffold.of(context).openDrawer(),
+        icon: const Icon(
+          Icons.menu_outlined,
+          size: 35,
+        ),
       ),
     ),
     title: Padding(

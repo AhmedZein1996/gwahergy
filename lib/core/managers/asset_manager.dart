@@ -32,6 +32,11 @@ class ImageManager {
   static const String twitter = '$_imagesPath/twitter.svg';
   static const String facebook = '$_imagesPath/facebook.svg';
   static const String profilePlaceHolder = '$_imagesPath/profile_place_holder.png';
+  static const String homeSliderImage = '$_imagesPath/slider_image.png';
+  static const String homeFirstCategoryBackgroundLines = '$_imagesPath/home_first_category_background_lines.png';
+  static const String homeSecondCategoryBackgroundLines = '$_imagesPath/home_second_category_background_lines.svg';
+  static const String bracelet = '$_imagesPath/bracelet.png';
+  static const String ring = '$_imagesPath/ring.png';
 }
 
 class IconManager {
