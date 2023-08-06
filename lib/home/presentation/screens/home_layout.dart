@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gwahergy/core/shared/widgets/custom_app_bar.dart';
 import 'package:gwahergy/home/presentation/widgets/bottom_nav_bar.dart';
+
 import '../../../core/constants/constants.dart';
 import '../../../core/shared/blocs/nav_bar/nav_bar_cubit.dart';
 
@@ -17,7 +18,7 @@ class HomeLayout extends StatelessWidget {
             Scaffold(
               extendBody: true,
               appBar: state.index == 1
-                  ?null
+                  ? null
                   : buildTransparentAppBarWithTitle(
                       title: context
                           .read<NavBarCubit>()
