@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:gwahergy/categories/presentation/screens/category_products.dart';
+
 import '../../home/presentation/screens/home_layout.dart';
 import '../../welcome/presentation/blocs/splash/splash_cubit.dart';
 import '../../welcome/presentation/screens/splash_screen.dart';
@@ -16,6 +18,7 @@ class Routes {
   static const String categories = '/categories';
   static const String currency = '/currency';
   static const String contactUs = '/contactUs';
+  static const String categoryProducts = '/categoryProducts';
 }
 
 class RouteGenerator {
@@ -42,6 +45,15 @@ class RouteGenerator {
             return BlocProvider(
               create: (BuildContext context) => sl<NavBarCubit>(),
               child: const HomeLayout(),
+            );
+          },
+        );
+      case Routes.categoryProducts:
+        return MaterialPageRoute(
+          builder: (_) {
+            return BlocProvider(
+              create: (BuildContext context) => sl<NavBarCubit>(),
+              child: const CategoryProducts(),
             );
           },
         );

@@ -30,10 +30,8 @@ buildAppBarWithLogo(BuildContext context, String logoPath) {
     actions: [
       IconButton(
         onPressed: () {},
-        icon: Image.asset(
-          IconManager.searchPng,
-          width: 35,
-          height: 35,
+        icon: SvgPicture.asset(
+          IconManager.searchSvg,
         ),
       ),
     ],
@@ -45,17 +43,15 @@ buildAppBarWithTitleAndActions(BuildContext context, String title) {
     backgroundColor: Colors.transparent,
     elevation: 0,
     centerTitle: true,
-    leading: IconButton(
-      onPressed: () {},
-      icon: const Icon(Icons.menu_outlined),
+    title: Text(
+      title,
+      style: TextStyleManager.darkBlue_24BOLD,
     ),
-    title: Text(title),
     actions: [
-      Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.0.w),
-        child: IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.search_outlined),
+      IconButton(
+        onPressed: () {},
+        icon: SvgPicture.asset(
+          IconManager.searchSvg,
         ),
       ),
     ],
@@ -71,7 +67,7 @@ buildTransparentAppBarWithTitle({String? title}) {
       child: title != null
           ? Text(
               title,
-              style: TextStyleManager.darkBlue_26BOLD,
+              style: TextStyleManager.darkBlue_24BOLD,
             )
           : null,
     ),

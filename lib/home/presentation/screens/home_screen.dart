@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
         // TODO: call get products here
       },
       child: Scaffold(
-        appBar:  buildAppBarWithLogo(
+        appBar: buildAppBarWithLogo(
           context,
           ImageManager.homeLogo,
         ),
@@ -36,7 +36,7 @@ class HomeScreen extends StatelessWidget {
               const HomeCategoryItem(
                 homeCategoryBackgroundLines:
                     ImageManager.homeFirstCategoryBackgroundLines,
-                productItemsCardBackgroundColor:  Color(0xFFFFF895),
+                productItemsCardBackgroundColor: Color(0xFFFFF895),
                 products: [
                   ProductEntity(
                     title: 'خاتم',

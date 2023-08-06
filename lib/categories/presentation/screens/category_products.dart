@@ -1,21 +1,23 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:gwahergy/core/shared/widgets/custom_app_bar.dart';
 
 import '../../../core/managers/asset_manager.dart';
 import '../../../core/managers/size_manager.dart';
-import '../../domain/entities/product/product_entity.dart';
-import '../widgets/product_item_card.dart';
+import '../../../home/domain/entities/product/product_entity.dart';
+import '../../../home/presentation/widgets/product_item_card.dart';
 
-class PopularProductsScreen extends StatelessWidget {
-  const PopularProductsScreen({Key? key}) : super(key: key);
+class CategoryProducts extends StatelessWidget {
+  const CategoryProducts({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.transparent,
+      appBar: buildAppBarWithTitleAndActions(
+        context,
+        'خواتم',
+      ),
       body: Stack(
         children: [
           Positioned.fill(
@@ -33,7 +35,7 @@ class PopularProductsScreen extends StatelessWidget {
                 horizontal: AppPadding.padding10,
                 vertical: AppPadding.padding16),
             child: GridView.builder(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 childAspectRatio: .85,
                 crossAxisSpacing: 10,
@@ -41,8 +43,8 @@ class PopularProductsScreen extends StatelessWidget {
               ),
               itemCount: 5,
               itemBuilder: (context, index) {
-                return ProductItemCard(
-                  product: const ProductEntity(
+                return const ProductItemCard(
+                  product: ProductEntity(
                     title: 'خاتم',
                     imgUrl: ImageManager.ring,
                     price: '5000',
