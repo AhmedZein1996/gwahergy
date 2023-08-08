@@ -5,7 +5,7 @@ import '../../../core/managers/asset_manager.dart';
 import '../../../core/shared/widgets/client_drawer.dart';
 import '../../../core/shared/widgets/custom_app_bar.dart';
 import '../../domain/entities/product/product_entity.dart';
-import '../widgets/home_category_item.dart';
+import '../widgets/home_category_widget.dart';
 import '../widgets/home_slider.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -33,77 +33,21 @@ class HomeScreen extends StatelessWidget {
               SizedBox(
                 height: 25.h,
               ),
-              const HomeCategoryItem(
-                homeCategoryBackgroundLines:
+              const HomeCategoryWidget(
+                categoryTitle: 'خواتم',
+                categoryBackgroundLines:
                     ImageManager.homeFirstCategoryBackgroundLines,
                 productItemsCardBackgroundColor: Color(0xFFFFF895),
-                products: [
-                  ProductEntity(
-                    title: 'خاتم',
-                    imgUrl: ImageManager.ring,
-                    price: '5000',
-                    weight: '5',
-                    description: '',
-                  ),
-                  ProductEntity(
-                    title: 'خاتم',
-                    imgUrl: ImageManager.ring,
-                    price: '5000',
-                    weight: '5',
-                    description: '',
-                  ),
-                  ProductEntity(
-                    title: 'خاتم',
-                    imgUrl: ImageManager.ring,
-                    price: '5000',
-                    weight: '5',
-                    description: '',
-                  ),
-                  ProductEntity(
-                    title: 'خاتم',
-                    imgUrl: ImageManager.ring,
-                    price: '5000',
-                    weight: '5',
-                    description: '',
-                  ),
-                ],
+                products: products1,
               ),
               SizedBox(
                 height: 25.h,
               ),
-              const HomeCategoryItem(
-                homeCategoryBackgroundLines:
+              const HomeCategoryWidget(
+                categoryTitle: 'غوايش',
+                categoryBackgroundLines:
                     ImageManager.homeSecondCategoryBackgroundLines,
-                products: [
-                  ProductEntity(
-                    title: 'غويشة',
-                    imgUrl: ImageManager.bracelet,
-                    price: '34725',
-                    weight: '15',
-                    description: '',
-                  ),
-                  ProductEntity(
-                    title: 'غويشة',
-                    imgUrl: ImageManager.bracelet,
-                    price: '34725',
-                    weight: '15',
-                    description: '',
-                  ),
-                  ProductEntity(
-                    title: 'غويشة',
-                    imgUrl: ImageManager.bracelet,
-                    price: '34725',
-                    weight: '15',
-                    description: '',
-                  ),
-                  ProductEntity(
-                    title: 'غويشة',
-                    imgUrl: ImageManager.bracelet,
-                    price: '34725',
-                    weight: '15',
-                    description: '',
-                  ),
-                ],
+                products: products2,
               ),
               SizedBox(
                 height: 100.h,

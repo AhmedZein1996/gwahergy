@@ -5,18 +5,20 @@ import 'package:gwahergy/core/shared/widgets/custom_app_bar.dart';
 
 import '../../../core/managers/asset_manager.dart';
 import '../../../core/managers/size_manager.dart';
+import '../../../core/shared/widgets/product_item_card.dart';
 import '../../../home/domain/entities/product/product_entity.dart';
-import '../../../home/presentation/widgets/product_item_card.dart';
 
 class CategoryProducts extends StatelessWidget {
-  const CategoryProducts({super.key});
+  final String title;
+
+  const CategoryProducts({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBarWithTitleAndActions(
         context,
-        'خواتم',
+        title,
       ),
       body: Stack(
         children: [
@@ -45,6 +47,7 @@ class CategoryProducts extends StatelessWidget {
               itemBuilder: (context, index) {
                 return const ProductItemCard(
                   product: ProductEntity(
+                    id: 1,
                     title: 'خاتم',
                     imgUrl: ImageManager.ring,
                     price: '5000',

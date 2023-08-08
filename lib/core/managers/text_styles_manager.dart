@@ -90,6 +90,11 @@ class TextStyleManager {
       fontSize: 18.sp,
       color: ColorManager.black,
       fontFamily: FontManager.balooBhaijaan);
+  static final TextStyle black_20BOLD = TextStyle(
+      fontWeight: FontWeight.bold,
+      fontSize: 20.sp,
+      color: ColorManager.black,
+      fontFamily: FontManager.balooBhaijaan);
 
 // white style
   static final TextStyle white_12 = TextStyle(

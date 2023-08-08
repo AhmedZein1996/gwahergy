@@ -5,7 +5,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 class HomeCategoryBackground extends StatelessWidget {
   final String imagePath;
 
-  const HomeCategoryBackground({super.key, required this.imagePath});
+  const HomeCategoryBackground({
+    super.key,
+    required this.imagePath,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -32,11 +35,11 @@ class HomeCategoryBackground extends StatelessWidget {
                   ),
                 )
               : Image.asset(
-                imagePath,
-                width: 1.sw,
-                height: 560.h,
-                fit: BoxFit.cover,
-              ),
+                  imagePath,
+                  width: 1.sw,
+                  height: 560.h,
+                  fit: BoxFit.cover,
+                ),
         ),
       ),
     );

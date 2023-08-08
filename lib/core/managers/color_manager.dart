@@ -33,4 +33,5 @@ class ColorManager {
   static const red = Color(0xFFEB5757);
   static const socialBackground = Color(0xFFECECEC);
   static const profileSubtitle = Color(0xFF7A869A);
+  static const rectangleCard = Color(0xFFFFFFBF);
 }

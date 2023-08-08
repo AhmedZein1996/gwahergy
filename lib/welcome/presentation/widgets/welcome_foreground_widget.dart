@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'welcome_rounded_button.dart';
+
 import '../../../core/managers/asset_manager.dart';
 import 'welcome_description_text.dart';
+import 'welcome_rounded_button.dart';
 
 class WelcomeForegroundWidget extends StatelessWidget {
   const WelcomeForegroundWidget({
@@ -23,7 +24,7 @@ class WelcomeForegroundWidget extends StatelessWidget {
             height: 50.h,
           ),
           Image.asset(
-            ImageManager.welcomeForegroundImagePng,
+            ImageManager.welcomeForegroundImage,
             width: 233.w,
             height: 335.h,
           ),

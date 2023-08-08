@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gwahergy/core/managers/route_manager.dart';
 
 import '../../managers/asset_manager.dart';
 import '../../managers/text_styles_manager.dart';
@@ -29,9 +30,11 @@ buildAppBarWithLogo(BuildContext context, String logoPath) {
     ),
     actions: [
       IconButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).pushNamed(Routes.search);
+        },
         icon: SvgPicture.asset(
-          IconManager.searchSvg,
+          IconManager.search,
         ),
       ),
     ],
@@ -49,9 +52,11 @@ buildAppBarWithTitleAndActions(BuildContext context, String title) {
     ),
     actions: [
       IconButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).pushNamed(Routes.search);
+        },
         icon: SvgPicture.asset(
-          IconManager.searchSvg,
+          IconManager.search,
         ),
       ),
     ],

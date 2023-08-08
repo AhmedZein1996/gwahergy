@@ -9,7 +9,7 @@ import 'core/managers/theme_manager.dart';
 import 'core/services/services.dart';
 import 'core/utils/bloc_observer.dart';
 
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await initServices();
   Bloc.observer = MyBlocObserver();
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, child) {
         return MaterialApp(
-          title: 'Fitn Kitchen',
+          title: 'الجواهرجي',
           debugShowCheckedModeBanner: false,
           theme: ThemeManager.lightTheme,
           onGenerateRoute: RouteGenerator.getRoute,
@@ -56,4 +56,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-

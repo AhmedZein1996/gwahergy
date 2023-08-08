@@ -1,0 +1,116 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:gwahergy/core/managers/color_manager.dart';
+import 'package:gwahergy/core/managers/size_manager.dart';
+
+import '../../../home/domain/entities/product/product_entity.dart';
+import '../../managers/asset_manager.dart';
+import '../../managers/text_styles_manager.dart';
+
+class RectangleProductItemCard extends StatelessWidget {
+  final ProductEntity product;
+
+  const RectangleProductItemCard({
+    super.key,
+    required this.product,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 8,
+      color: ColorManager.rectangleCard,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(
+          AppRadius.borderRadius20.r,
+        ),
+      ),
+      child: InkWell(
+        // onTap: () {
+        //   Navigator.of(context).push(
+        //   );
+        // },
+        child: Padding(
+          padding: EdgeInsets.symmetric(
+            vertical: AppPadding.padding12.h,
+            horizontal: AppPadding.padding24.w,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(
+                  AppRadius.borderRadius20.r,
+                ),
+                child: Image.asset(
+                  product.imgUrl,
+                  height: 90.h,
+                ),
+              ),
+              Column(
+                children: [
+                  Text(
+                    product.title,
+                    style: TextStyleManager.black_20BOLD.copyWith(
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 8.h,
+                  ),
+                  Text(
+                    '${product.weight}جرام',
+                    style: TextStyleManager.black_16,
+                  ),
+                ],
+              ),
+              Column(
+                children: [
+                  SvgPicture.asset(
+                    IconManager.popular,
+                  ),
+                  SizedBox(
+                    height: 8.h,
+                  ),
+                  Text(
+                    '${product.price} LE',
+                    style: TextStyleManager.black_16,
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+      // ListTile(
+      //   contentPadding: const EdgeInsets.all(
+      //     AppPadding.padding20,
+      //   ),
+      //   trailing:
+      //   title: Column(
+      //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      //     children: [
+      //       Text(
+      //         product.title,
+      //       ),
+      //       Text(
+      //         '${product.weight} جرام',
+      //       ),
+      //     ],
+      //   ),
+      //   leading: SizedBox(
+      //     child: ClipRRect(
+      //       borderRadius: BorderRadius.circular(
+      //         20.r,
+      //       ),
+      //       child: Image.asset(
+      //         product.imgUrl,
+      //         height: 120.h,
+      //       ),
+      //     ),
+      //   ),
+      // ),
+    );
+  }
+}

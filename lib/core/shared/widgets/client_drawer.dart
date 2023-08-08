@@ -44,7 +44,7 @@ class ClientDrawer extends StatelessWidget {
                     height: 35.h,
                   ),
                   onTap: () {
-                    Navigator.of(context).pushNamed(Routes.categoryProducts);
+                    Navigator.of(context).pushNamed(Routes.categories);
                   },
                 ),
                 ListTile(
@@ -55,7 +55,7 @@ class ClientDrawer extends StatelessWidget {
                     height: 35.h,
                   ),
                   onTap: () {
-                    Navigator.of(context).pushNamed(Routes.popularProduct);
+                    //  Navigator.of(context).pushNamed(Routes.popularProduct);
                   },
                 ),
                 ListTile(
@@ -66,7 +66,7 @@ class ClientDrawer extends StatelessWidget {
                     height: 35.h,
                   ),
                   onTap: () {
-                    Navigator.of(context).pushNamed(Routes.blog);
+                    //     Navigator.of(context).pushNamed(Routes.blog);
                   },
                 ),
                 ListTile(
@@ -77,7 +77,7 @@ class ClientDrawer extends StatelessWidget {
                     height: 35.h,
                   ),
                   onTap: () {
-                    Navigator.of(context).pushNamed(Routes.currency);
+                    //      Navigator.of(context).pushNamed(Routes.currency);
                   },
                 ),
                 ListTile(
@@ -88,7 +88,7 @@ class ClientDrawer extends StatelessWidget {
                     height: 35.h,
                   ),
                   onTap: () {
-                    Navigator.of(context).pushNamed(Routes.contactUs);
+                    //   Navigator.of(context).pushNamed(Routes.contactUs);
                   },
                 ),
               ],
