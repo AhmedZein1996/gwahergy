@@ -33,17 +33,17 @@ class HomeScreen extends StatelessWidget {
               SizedBox(
                 height: 25.h,
               ),
-              const HomeCategoryWidget(
+              HomeCategoryWidget(
                 categoryTitle: 'خواتم',
                 categoryBackgroundLines:
                     ImageManager.homeFirstCategoryBackgroundLines,
-                productItemsCardBackgroundColor: Color(0xFFFFF895),
+                productItemsCardBackgroundColor: const Color(0xFFFFF895),
                 products: products1,
               ),
               SizedBox(
                 height: 25.h,
               ),
-              const HomeCategoryWidget(
+              HomeCategoryWidget(
                 categoryTitle: 'غوايش',
                 categoryBackgroundLines:
                     ImageManager.homeSecondCategoryBackgroundLines,

@@ -27,7 +27,7 @@ class CategoryProducts extends StatelessWidget {
               height: 1.sh,
               width: 1.sw,
               child: SvgPicture.asset(
-                ImageManager.popularProductsBackgroundImageSvg,
+                ImageManager.categoryProductsBackgroundLines,
                 fit: BoxFit.fill,
               ),
             ),
@@ -43,17 +43,11 @@ class CategoryProducts extends StatelessWidget {
                 crossAxisSpacing: 10,
                 mainAxisSpacing: 20,
               ),
-              itemCount: 5,
+              itemCount: products1.length,
               itemBuilder: (context, index) {
-                return const ProductItemCard(
-                  product: ProductEntity(
-                    id: 1,
-                    title: 'خاتم',
-                    imgUrl: ImageManager.ring,
-                    price: '5000',
-                    weight: '5',
-                    description: '',
-                  ),
+                return ProductItemCard(
+                  allProducts: products1,
+                  product: products1[index],
                 );
               },
             ),

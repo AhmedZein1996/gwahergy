@@ -4,17 +4,22 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeCategoryBackground extends StatelessWidget {
   final String imagePath;
+  final double padding;
+  final double height;
 
   const HomeCategoryBackground({
     super.key,
     required this.imagePath,
+    this.padding = 8,
+    this.height = 560,
   });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 8.w),
+      padding: EdgeInsets.symmetric(horizontal: padding.w),
       child: Card(
+        margin: EdgeInsets.zero,
         elevation: 8,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(
@@ -28,17 +33,19 @@ class HomeCategoryBackground extends StatelessWidget {
           child: imagePath.endsWith('.svg')
               ? SizedBox(
                   width: 1.sw,
+                  height: height.h,
                   child: SvgPicture.asset(
                     imagePath,
-                    height: 560.h,
                     fit: BoxFit.cover,
                   ),
                 )
-              : Image.asset(
-                  imagePath,
+              : SizedBox(
                   width: 1.sw,
-                  height: 560.h,
-                  fit: BoxFit.cover,
+                  height: height.h,
+                  child: Image.asset(
+                    imagePath,
+                    fit: BoxFit.cover,
+                  ),
                 ),
         ),
       ),

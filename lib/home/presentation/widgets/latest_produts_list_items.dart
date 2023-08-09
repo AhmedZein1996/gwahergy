@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/managers/asset_manager.dart';
 import '../../../core/shared/widgets/product_item_card.dart';
 import '../../domain/entities/product/product_entity.dart';
 
@@ -16,17 +15,11 @@ class LatestProductsListItems extends StatelessWidget {
         crossAxisSpacing: 10,
         mainAxisSpacing: 20,
       ),
-      itemCount: 5,
+      itemCount: products2.length,
       itemBuilder: (context, index) {
-        return const ProductItemCard(
-          product: ProductEntity(
-            id: 1,
-            title: 'خاتم',
-            imgUrl: ImageManager.ring,
-            price: '5000',
-            weight: '5',
-            description: '',
-          ),
+        return ProductItemCard(
+          allProducts: products,
+          product: products[index],
         );
       },
     );

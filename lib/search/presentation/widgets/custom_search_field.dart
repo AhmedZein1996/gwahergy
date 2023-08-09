@@ -77,7 +77,7 @@ class CustomSearchField extends StatelessWidget {
             ),
             child: Container(
               padding: EdgeInsets.symmetric(
-                horizontal: AppPadding.padding20.w,
+                horizontal: AppPadding.padding16.w,
               ),
               decoration: BoxDecoration(
                 color: ColorManager.primary,

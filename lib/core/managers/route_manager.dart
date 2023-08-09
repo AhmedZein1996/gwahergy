@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gwahergy/categories/presentation/screens/categories_screen.dart';
 import 'package:gwahergy/categories/presentation/screens/category_products.dart';
+import 'package:gwahergy/home/domain/entities/product/product_entity.dart';
+import 'package:gwahergy/home/presentation/screens/product_details_screen.dart';
 
 import '../../home/presentation/screens/home_layout.dart';
 import '../../search/presentation/screens/search_screen.dart';
@@ -21,6 +23,7 @@ class Routes {
   static const String categoryProducts = '/categoryProducts';
   static const String categories = '/categories';
   static const String search = '/search';
+  static const String productDetails = '/productDetails';
 }
 
 class RouteGenerator {
@@ -68,7 +71,17 @@ class RouteGenerator {
       case Routes.search:
         return MaterialPageRoute(
           builder: (_) {
-            return SearchScreen();
+            return const SearchScreen();
+          },
+        );
+      case Routes.productDetails:
+        return MaterialPageRoute(
+          builder: (_) {
+            final args = settings.arguments as Map;
+            return ProductDetailsScreen(
+              product: args['product'] as ProductEntity,
+              allProducts: args['allProducts'] as List<ProductEntity>,
+            );
           },
         );
     }

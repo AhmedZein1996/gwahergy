@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gwahergy/search/presentation/widgets/search_rectangular_card.dart';
 
+import '../../../core/managers/route_manager.dart';
 import '../../../core/managers/size_manager.dart';
-import '../../../core/shared/widgets/rectangle_product_item_card.dart';
 import '../../../home/domain/entities/product/product_entity.dart';
 
 class SearchListItems extends StatelessWidget {
@@ -22,7 +23,16 @@ class SearchListItems extends StatelessWidget {
         ),
         itemCount: products.length,
         itemBuilder: (context, index) {
-          return RectangleProductItemCard(
+          return SearchRectangularCard(
+            onTab: () {
+              Navigator.of(context).pushNamed(
+                Routes.productDetails,
+                arguments: {
+                  'product': products[index],
+                  'allProducts': products,
+                },
+              );
+            },
             product: products[index],
           );
         },

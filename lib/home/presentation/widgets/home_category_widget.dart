@@ -42,14 +42,16 @@ class HomeCategoryWidget extends StatelessWidget {
                   horizontal: AppPadding.padding24.w,
                 ),
                 onTap: () {
-                  Navigator.of(context).pushNamed(Routes.categoryProducts,
-                      arguments: categoryTitle);
+                  Navigator.of(context).pushNamed(
+                    Routes.categoryProducts,
+                    arguments: categoryTitle,
+                  );
                 },
               ),
               SizedBox(
                 height: 20.h,
               ),
-              productList(productItemsCardBackgroundColor),
+              productList(productItemsCardBackgroundColor, context),
             ],
           ),
         ),
@@ -57,19 +59,14 @@ class HomeCategoryWidget extends StatelessWidget {
     );
   }
 
-  Column productList(Color? productItemsCardBackgroundColor) {
+  Column productList(
+      Color? productItemsCardBackgroundColor, BuildContext context) {
     final List<ProductItemCard> productItems = List.generate(
       products.length,
       (index) => ProductItemCard(
         backgroundColor: productItemsCardBackgroundColor,
-        product: ProductEntity(
-          id: 1,
-          title: products[index].title,
-          imgUrl: products[index].imgUrl,
-          price: products[index].price,
-          weight: products[index].weight,
-          description: products[index].description,
-        ),
+        allProducts: products,
+        product: products[index],
       ),
     );
     return Column(

@@ -28,7 +28,7 @@ class ImageManager {
       '$_imagesPath/home_second_category_background_lines.svg';
   static const String bracelet = '$_imagesPath/bracelet.png';
   static const String ring = '$_imagesPath/ring.png';
-  static const String necklace = '$_imagesPath/necklace.png';
+  static const String necklace = '$_imagesPath/necklace.jpg';
   static const String earring = '$_imagesPath/earring.png';
   static const String bar = '$_imagesPath/bar.png';
   static const String drawerBackgroundLines =
@@ -37,6 +37,10 @@ class ImageManager {
       '$_imagesPath/categories_background_lines.svg';
   static const String searchBackgroundLines =
       '$_imagesPath/search_background_lines.svg';
+  static const String productDetailsBackgroundLines =
+      '$_imagesPath/product_details_background_lines.svg';
+  static const String categoryProductsBackgroundLines =
+      '$_imagesPath/category_products_background_lines.svg';
 }
 
 class IconManager {
