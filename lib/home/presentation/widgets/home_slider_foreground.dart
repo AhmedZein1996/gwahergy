@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gwahergy/core/managers/asset_manager.dart';
+
 class HomeSliderForeground extends StatelessWidget {
+  final String imgPath;
+
   const HomeSliderForeground({
     super.key,
+    required this.imgPath,
   });
 
   @override
@@ -15,8 +18,9 @@ class HomeSliderForeground extends StatelessWidget {
         ),
       ),
       child: Image.asset(
-        ImageManager.homeSliderImage,
+        imgPath,
         width: 1.sw,
+        //fit: BoxFit.fill,
         fit: BoxFit.cover,
       ),
     );

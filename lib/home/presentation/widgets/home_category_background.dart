@@ -6,12 +6,16 @@ class HomeCategoryBackground extends StatelessWidget {
   final String imagePath;
   final double padding;
   final double height;
+  final double elevation;
+  final double borderRadius;
 
   const HomeCategoryBackground({
     super.key,
     required this.imagePath,
     this.padding = 8,
     this.height = 560,
+    this.elevation = 8,
+    this.borderRadius = 20,
   });
 
   @override
@@ -20,15 +24,15 @@ class HomeCategoryBackground extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: padding.w),
       child: Card(
         margin: EdgeInsets.zero,
-        elevation: 8,
+        elevation: elevation,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(
-            20.r,
+            borderRadius.r,
           ),
         ),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(
-            20.r,
+            borderRadius.r,
           ),
           child: imagePath.endsWith('.svg')
               ? SizedBox(

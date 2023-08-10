@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gwahergy/core/managers/color_manager.dart';
 
 import '../../../core/managers/asset_manager.dart';
 import '../../../core/shared/widgets/client_drawer.dart';
@@ -37,7 +38,7 @@ class HomeScreen extends StatelessWidget {
                 categoryTitle: 'خواتم',
                 categoryBackgroundLines:
                     ImageManager.homeFirstCategoryBackgroundLines,
-                productItemsCardBackgroundColor: const Color(0xFFFFF895),
+                productItemsCardBackgroundColor: ColorManager.productItemCard,
                 products: products1,
               ),
               SizedBox(

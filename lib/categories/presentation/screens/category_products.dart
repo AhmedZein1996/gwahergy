@@ -10,8 +10,13 @@ import '../../../home/domain/entities/product/product_entity.dart';
 
 class CategoryProducts extends StatelessWidget {
   final String title;
+  final List<ProductEntity> products;
 
-  const CategoryProducts({super.key, required this.title});
+  const CategoryProducts({
+    super.key,
+    required this.title,
+    required this.products,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -34,8 +39,9 @@ class CategoryProducts extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(
-                horizontal: AppPadding.padding10,
-                vertical: AppPadding.padding16),
+              horizontal: AppPadding.padding10,
+              vertical: AppPadding.padding16,
+            ),
             child: GridView.builder(
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
@@ -46,8 +52,8 @@ class CategoryProducts extends StatelessWidget {
               itemCount: products1.length,
               itemBuilder: (context, index) {
                 return ProductItemCard(
-                  allProducts: products1,
-                  product: products1[index],
+                  allProducts: products,
+                  product: products[index],
                 );
               },
             ),

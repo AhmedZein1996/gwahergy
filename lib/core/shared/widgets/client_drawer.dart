@@ -55,20 +55,20 @@ class ClientDrawer extends StatelessWidget {
                     height: 35.h,
                   ),
                   onTap: () {
-                    //  Navigator.of(context).pushNamed(Routes.popularProduct);
+                    Navigator.of(context).pushNamed(Routes.favorites);
                   },
                 ),
-                ListTile(
-                  title: const Text('المدونة'),
-                  leading: SvgPicture.asset(
-                    IconManager.blogBlack,
-                    width: 35.w,
-                    height: 35.h,
-                  ),
-                  onTap: () {
-                    //     Navigator.of(context).pushNamed(Routes.blog);
-                  },
-                ),
+                // ListTile(
+                //   title: const Text('المدونة'),
+                //   leading: SvgPicture.asset(
+                //     IconManager.blogBlack,
+                //     width: 35.w,
+                //     height: 35.h,
+                //   ),
+                //   onTap: () {
+                //     //     Navigator.of(context).pushNamed(Routes.blog);
+                //   },
+                // ),
                 ListTile(
                   title: const Text('أسعار اليوم'),
                   leading: SvgPicture.asset(
@@ -77,7 +77,7 @@ class ClientDrawer extends StatelessWidget {
                     height: 35.h,
                   ),
                   onTap: () {
-                    //      Navigator.of(context).pushNamed(Routes.currency);
+                    Navigator.of(context).pushNamed(Routes.currency);
                   },
                 ),
                 ListTile(

@@ -15,7 +15,7 @@ class CategoriesScreen extends StatelessWidget {
     return Scaffold(
       appBar: buildAppBarWithTitleAndActions(
         context,
-        'التصنيقات',
+        'التصنيفات',
       ),
       body: Stack(
         children: [

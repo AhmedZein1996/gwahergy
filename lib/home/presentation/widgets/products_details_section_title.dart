@@ -28,7 +28,9 @@ class ProductDetailsSectionTitle extends StatelessWidget {
             SizedBox(
               width: 10.w,
             ),
-            const Icon(Icons.arrow_back_ios_new),
+            const Icon(
+              Icons.arrow_back_ios_new,
+            ),
           ],
         ),
       ),

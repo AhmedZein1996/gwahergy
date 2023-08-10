@@ -18,8 +18,10 @@ class AppRadius {
   static const double borderRadius6 = 6.0;
   static const double borderRadius8 = 8.0;
   static const double borderRadius12 = 12.0;
+  static const double borderRadius15 = 15.0;
   static const double borderRadius16 = 16.0;
   static const double borderRadius20 = 20.0;
+  static const double borderRadius23 = 23.0;
   static const double borderRadius25 = 25.0;
   static const double borderRadius36 = 36.0;
   static const double borderRadius100 = 100.0;

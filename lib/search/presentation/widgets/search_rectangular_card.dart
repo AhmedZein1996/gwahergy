@@ -30,61 +30,55 @@ class SearchRectangularCard extends StatelessWidget {
             AppRadius.borderRadius20.r,
           ),
         ),
-        child: InkWell(
-          // onTap: () {
-          //   Navigator.of(context).push(
-          //   );
-          // },
-          child: Padding(
-            padding: EdgeInsets.symmetric(
-              vertical: AppPadding.padding12.h,
-              horizontal: AppPadding.padding24.w,
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(
-                    AppRadius.borderRadius20.r,
+        child: Padding(
+          padding: EdgeInsets.symmetric(
+            vertical: AppPadding.padding12.h,
+            horizontal: AppPadding.padding24.w,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(
+                  AppRadius.borderRadius20.r,
+                ),
+                child: Image.asset(
+                  product.imgUrl,
+                  height: 90.h,
+                ),
+              ),
+              Column(
+                children: [
+                  Text(
+                    product.title,
+                    style: TextStyleManager.black_20BOLD.copyWith(
+                      fontWeight: FontWeight.w400,
+                    ),
                   ),
-                  child: Image.asset(
-                    product.imgUrl,
-                    height: 90.h,
+                  SizedBox(
+                    height: 8.h,
                   ),
-                ),
-                Column(
-                  children: [
-                    Text(
-                      product.title,
-                      style: TextStyleManager.black_20BOLD.copyWith(
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 8.h,
-                    ),
-                    Text(
-                      '${product.weight}جرام',
-                      style: TextStyleManager.black_16,
-                    ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    SvgPicture.asset(
-                      IconManager.popular,
-                    ),
-                    SizedBox(
-                      height: 8.h,
-                    ),
-                    Text(
-                      '${product.price} LE',
-                      style: TextStyleManager.black_16,
-                    ),
-                  ],
-                ),
-              ],
-            ),
+                  Text(
+                    '${product.weight}جرام',
+                    style: TextStyleManager.black_16,
+                  ),
+                ],
+              ),
+              Column(
+                children: [
+                  SvgPicture.asset(
+                    IconManager.popular,
+                  ),
+                  SizedBox(
+                    height: 8.h,
+                  ),
+                  Text(
+                    '${product.price} LE',
+                    style: TextStyleManager.black_16,
+                  ),
+                ],
+              ),
+            ],
           ),
         ),
       ),

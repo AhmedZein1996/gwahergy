@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gwahergy/core/managers/color_manager.dart';
 import 'package:gwahergy/core/shared/widgets/product_item_card.dart';
 
 import '../../../home/domain/entities/product/product_entity.dart';
@@ -9,11 +10,13 @@ class HorizontalListItems extends StatelessWidget {
   const HorizontalListItems({
     super.key,
     required this.allProducts,
+    this.color = ColorManager.white,
     this.product,
   });
 
   final List<ProductEntity> allProducts;
   final ProductEntity? product;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +42,7 @@ class HorizontalListItems extends StatelessWidget {
             product: otherProducts[index],
             margin: const EdgeInsets.fromLTRB(4, 4, 4, 20),
             fromDetails: product != null,
+            backgroundColor: color,
           );
         },
         separatorBuilder: (context, index) {

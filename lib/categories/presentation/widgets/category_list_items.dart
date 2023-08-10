@@ -18,6 +18,7 @@ class CategoryListItems extends StatelessWidget {
   Widget build(BuildContext context) {
     return CategoryBackground(
       title: title,
+      products: products,
       child: HorizontalListItems(
         allProducts: products,
       ),

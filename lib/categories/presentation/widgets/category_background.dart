@@ -4,15 +4,18 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/managers/route_manager.dart';
 import '../../../core/managers/size_manager.dart';
 import '../../../core/shared/widgets/category_section_title.dart';
+import '../../../home/domain/entities/product/product_entity.dart';
 
 class CategoryBackground extends StatelessWidget {
   final Widget child;
   final String title;
+  final List<ProductEntity> products;
 
   const CategoryBackground({
     super.key,
     required this.title,
     required this.child,
+    required this.products,
   });
 
   @override
@@ -39,8 +42,13 @@ class CategoryBackground extends StatelessWidget {
                 left: AppPadding.padding12.w,
               ),
               onTap: () {
-                Navigator.of(context)
-                    .pushNamed(Routes.categoryProducts, arguments: title);
+                Navigator.of(context).pushNamed(
+                  Routes.categoryProducts,
+                  arguments: {
+                    'title': title,
+                    'products': products,
+                  },
+                );
               },
             ),
             SizedBox(

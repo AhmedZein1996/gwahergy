@@ -26,11 +26,11 @@ class ImageManager {
       '$_imagesPath/home_first_category_background_lines.png';
   static const String homeSecondCategoryBackgroundLines =
       '$_imagesPath/home_second_category_background_lines.svg';
-  static const String bracelet = '$_imagesPath/bracelet.png';
-  static const String ring = '$_imagesPath/ring.png';
-  static const String necklace = '$_imagesPath/necklace.jpg';
-  static const String earring = '$_imagesPath/earring.png';
-  static const String bar = '$_imagesPath/bar.png';
+  static const String bracelet = '$_imagesPath/bracelet.jpeg';
+  static const String ring = '$_imagesPath/ring.jpeg';
+  static const String necklace = '$_imagesPath/necklace.jpeg';
+  static const String earring = '$_imagesPath/earring.jpeg';
+  static const String bar = '$_imagesPath/bar.jpeg';
   static const String drawerBackgroundLines =
       '$_imagesPath/drawer_background_lines.svg';
   static const String categoriesBackgroundLines =
@@ -41,6 +41,12 @@ class ImageManager {
       '$_imagesPath/product_details_background_lines.svg';
   static const String categoryProductsBackgroundLines =
       '$_imagesPath/category_products_background_lines.svg';
+  static const String karat_18 = '$_imagesPath/karat_18.png';
+  static const String karat_21 = '$_imagesPath/karat_21.png';
+  static const String karat_24 = '$_imagesPath/karat_24.png';
+  static const String slider1 = '$_imagesPath/slider_1.jpeg';
+  static const String slider2 = '$_imagesPath/slider_2.jpeg';
+  static const String slider3 = '$_imagesPath/slider_3.jpeg';
 }
 
 class IconManager {

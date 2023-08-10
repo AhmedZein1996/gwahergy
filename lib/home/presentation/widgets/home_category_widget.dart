@@ -44,7 +44,10 @@ class HomeCategoryWidget extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context).pushNamed(
                     Routes.categoryProducts,
-                    arguments: categoryTitle,
+                    arguments: {
+                      'title': categoryTitle,
+                      'products': products,
+                    },
                   );
                 },
               ),

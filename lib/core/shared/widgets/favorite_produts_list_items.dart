@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/shared/widgets/product_item_card.dart';
-import '../../domain/entities/product/product_entity.dart';
+import '../../../home/domain/entities/product/product_entity.dart';
+import 'product_item_card.dart';
 
-class LatestProductsListItems extends StatelessWidget {
-  const LatestProductsListItems({super.key});
+class FavoriteProductsListItems extends StatelessWidget {
+  const FavoriteProductsListItems({super.key});
 
   @override
   Widget build(BuildContext context) {

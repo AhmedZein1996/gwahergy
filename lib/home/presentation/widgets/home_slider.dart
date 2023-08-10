@@ -1,7 +1,10 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gwahergy/core/managers/asset_manager.dart';
+
 import '../../../../core/managers/size_manager.dart';
+import '../../../core/constants/constants.dart';
 import 'home_slider_background.dart';
 import 'home_slider_foreground.dart';
 import 'home_slider_indicator.dart';
@@ -34,10 +37,13 @@ class _HomeSliderState extends State<HomeSlider> {
               return SizedBox(
                 height: 202.h,
                 width: .9.sw,
-                child: const Stack(
+                child: Stack(
                   children: [
-                    HomeSliderBackground(),
-                    HomeSliderForeground(),
+                    const HomeSliderBackground(),
+                    HomeSliderForeground(
+                      imgPath: AppConstants.sliderImages[itemIndex] ??
+                          ImageManager.slider1,
+                    ),
                   ],
                 ),
               );
@@ -47,7 +53,7 @@ class _HomeSliderState extends State<HomeSlider> {
               enlargeStrategy: CenterPageEnlargeStrategy.zoom,
               viewportFraction: 1,
               enableInfiniteScroll: false,
-              autoPlay: true,
+              autoPlay: false,
               enlargeCenterPage: true,
               onPageChanged: (index, reason) {
                 setState(

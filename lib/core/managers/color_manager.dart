@@ -15,12 +15,6 @@ class ColorManager {
   static const background = Color(0xFFEEEEEE);
   static const onBoardingText = Color(0xFF393939);
   static const inactivePageIndicator = Color(0xFFCCCCCC);
-  static const onBoardingColor = Color.fromRGBO(
-    158,
-    204,
-    80,
-    0.49,
-  );
   static const title = Color(0xFF172B4D);
   static const fieldFill = Color(0xFFF4F5F7);
   static const subtitle = Color(0xFF434343);
@@ -34,4 +28,5 @@ class ColorManager {
   static const socialBackground = Color(0xFFECECEC);
   static const profileSubtitle = Color(0xFF7A869A);
   static const rectangleCard = Color(0xFFFFFFBF);
+  static const productItemCard = Color(0xFFFFF895);
 }
