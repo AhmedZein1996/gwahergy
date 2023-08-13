@@ -31,24 +31,27 @@ class ProductDetailsDescriptionRectangularCard extends StatelessWidget {
             vertical: AppPadding.padding12.h,
             horizontal: AppPadding.padding24.w,
           ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'الوصف',
-                style: TextStyleManager.black_20BOLD.copyWith(
-                  fontWeight: FontWeight.w400,
+          child: SizedBox(
+            width: 1.sw,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'الوصف',
+                  style: TextStyleManager.black_20BOLD.copyWith(
+                    fontWeight: FontWeight.w400,
+                  ),
                 ),
-              ),
-              SizedBox(
-                height: 8.h,
-              ),
-              Text(
-                product.description,
-                style: TextStyleManager.black_16,
-                maxLines: 3,
-              ),
-            ],
+                SizedBox(
+                  height: 8.h,
+                ),
+                Text(
+                  product.description,
+                  style: TextStyleManager.black_16,
+                  maxLines: 3,
+                ),
+              ],
+            ),
           ),
         ),
       ),

@@ -1,7 +1,7 @@
 import '../managers/asset_manager.dart';
 
 class AppConstants {
-  static const String onBoardingCacheKey = 'onBoardingCacheKey';
+  static const String onBoardingWelcomeCacheKey = 'onBoardingWelcomeCacheKey';
   static const String userNameCacheKey = 'userNameCacheKey';
   static const String passwordCacheKey = 'passwordCacheKey';
 

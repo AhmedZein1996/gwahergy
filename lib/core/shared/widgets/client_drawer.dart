@@ -81,7 +81,8 @@ class ClientDrawer extends StatelessWidget {
                   },
                 ),
                 ListTile(
-                  title: const Text('الجواهرجى'),
+                  //  title: const Text('الجواهرجى'),
+                  title: const Text('الطاهر'),
                   leading: SvgPicture.asset(
                     IconManager.contactUs,
                     width: 35.w,

@@ -23,6 +23,7 @@ class CategoryBackground extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(right: 15.w),
       child: Card(
+        //  color: ColorManager.productItemCard,
         elevation: 8,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(

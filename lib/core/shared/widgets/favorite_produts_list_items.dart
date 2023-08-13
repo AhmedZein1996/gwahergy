@@ -11,7 +11,7 @@ class FavoriteProductsListItems extends StatelessWidget {
     return GridView.builder(
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        childAspectRatio: .85,
+        childAspectRatio: .87,
         crossAxisSpacing: 10,
         mainAxisSpacing: 20,
       ),
@@ -19,6 +19,8 @@ class FavoriteProductsListItems extends StatelessWidget {
       itemBuilder: (context, index) {
         return ProductItemCard(
           allProducts: products,
+          width: 145, //145 , 120
+          height: 120,
           product: products[index],
         );
       },

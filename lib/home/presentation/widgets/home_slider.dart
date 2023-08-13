@@ -53,7 +53,7 @@ class _HomeSliderState extends State<HomeSlider> {
               enlargeStrategy: CenterPageEnlargeStrategy.zoom,
               viewportFraction: 1,
               enableInfiniteScroll: false,
-              autoPlay: false,
+              autoPlay: true,
               enlargeCenterPage: true,
               onPageChanged: (index, reason) {
                 setState(

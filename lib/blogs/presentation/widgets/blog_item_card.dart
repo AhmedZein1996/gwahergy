@@ -43,7 +43,8 @@ class BlogItemCard extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text(
-                          'الجواهرجى',
+                          //   'الجواهرجى',
+                          'الطاهر',
                         ),
                         Row(
                           children: [

@@ -10,14 +10,17 @@ import 'package:gwahergy/home/presentation/screens/product_details_screen.dart';
 
 import '../../home/presentation/screens/home_layout.dart';
 import '../../search/presentation/screens/search_screen.dart';
+import '../../welcome/presentation/blocs/splash/splash_cubit.dart';
+import '../../welcome/presentation/screens/splash_screen.dart';
 import '../../welcome/presentation/screens/welcome_screen.dart';
 import '../services/services.dart';
 import '../shared/blocs/nav_bar/nav_bar_cubit.dart';
 
 class Routes {
-  // static const String splash = '/';
-  // static const String welcome = '/welcome';
-  static const String welcome = '/';
+  static const String splash = '/';
+  static const String welcome = '/welcome';
+
+  // static const String welcome = '/';
   static const String home = '/home';
   static const String blog = '/blog';
   static const String latestProduct = '/latestProduct';
@@ -33,15 +36,15 @@ class Routes {
 class RouteGenerator {
   static Route<dynamic>? getRoute(RouteSettings settings) {
     switch (settings.name) {
-      // case Routes.splash:
-      //   return MaterialPageRoute(
-      //     builder: (_) {
-      //       return BlocProvider(
-      //         create: (_) => sl<SplashCubit>()..endSplash(),
-      //         child: const SplashScreen(),
-      //       );
-      //     },
-      //   );
+      case Routes.splash:
+        return MaterialPageRoute(
+          builder: (_) {
+            return BlocProvider(
+              create: (_) => sl<SplashCubit>()..endSplash(),
+              child: const SplashScreen(),
+            );
+          },
+        );
       case Routes.welcome:
         return MaterialPageRoute(
           builder: (_) {

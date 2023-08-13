@@ -29,7 +29,7 @@ class HorizontalListItems extends StatelessWidget {
           .toList();
     }
     return SizedBox(
-      height: 230,
+      height: 195,
       child: ListView.separated(
         padding: const EdgeInsets.symmetric(
           horizontal: AppPadding.screenBodyPadding,
@@ -47,7 +47,7 @@ class HorizontalListItems extends StatelessWidget {
         },
         separatorBuilder: (context, index) {
           return SizedBox(
-            width: 15.w,
+            width: 5.w,
           );
         },
       ),

@@ -6,10 +6,14 @@ import 'package:gwahergy/core/managers/text_styles_manager.dart';
 
 class CurrencyExchangeCard extends StatelessWidget {
   final String title;
+  final String currency;
+  final String price;
 
   const CurrencyExchangeCard({
     super.key,
     required this.title,
+    required this.currency,
+    required this.price,
   });
 
   @override
@@ -61,8 +65,9 @@ class CurrencyExchangeCard extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                     Text(
-                      'EGP 30.9',
+                    Text(
+                      price,
+                      textDirection: TextDirection.ltr,
                       style: TextStyleManager.black_18,
                     ),
                     Container(
@@ -81,8 +86,9 @@ class CurrencyExchangeCard extends StatelessWidget {
                         color: ColorManager.primary,
                       ),
                     ),
-                     Text(
-                      'USD 1',
+                    Text(
+                      currency,
+                      textDirection: TextDirection.ltr,
                       style: TextStyleManager.black_18,
                     ),
                   ],

@@ -1,5 +1,12 @@
 import 'package:get_it/get_it.dart';
+import 'package:gwahergy/welcome/data/data_sources/local/data_sources/welcome_cache_data_source.dart';
+import 'package:gwahergy/welcome/data/repositories/welcome_repository_impl.dart';
+import 'package:gwahergy/welcome/domain/repositories/welcome_repository.dart';
+import 'package:gwahergy/welcome/presentation/blocs/welcome/welcome_cubit.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../welcome/domain/use_cases/check_welcome_status_use_case.dart';
+import '../../welcome/domain/use_cases/complete_welcome_use_case.dart';
 import '../../welcome/presentation/blocs/splash/splash_cubit.dart';
 import '../shared/blocs/nav_bar/nav_bar_cubit.dart';
 
@@ -10,30 +17,39 @@ Future<void> initServices() async {
   // sl.registerLazySingleton(
   //   () => _DioService.init(),
   // );
-  // final sharedPreferences = await _SharedPreferencesService.init();
-  // sl.registerLazySingleton<SharedPreferences>(
-  //   () => sharedPreferences,
-  // );
+  final sharedPreferences = await _SharedPreferencesService.init();
+  sl.registerLazySingleton<SharedPreferences>(
+    () => sharedPreferences,
+  );
 
   // data sources
 
-  // sl.registerLazySingleton<PostsRemoteDataSource>(
-  //   () => PostsRemoteDataSourceImpl(sl()),
-  // );
+  sl.registerLazySingleton<WelcomeCacheDataSource>(
+    () => WelcomeCacheDataSourceImpl(
+      sl(),
+    ),
+  );
 
   // repositories
 
-  // sl.registerLazySingleton<PostsRepository>(
-  //   () => PostsRepositoryImpl(
-  //     sl(),
-  //   ),
-  // );
+  sl.registerLazySingleton<WelcomeRepository>(
+    () => WelcomeRepositoryImpl(
+      sl(),
+    ),
+  );
 
   // use cases
 
-  // sl.registerLazySingleton(
-  //   () => GetPostsUseCase(sl()),
-  // );
+  sl.registerLazySingleton<CheckWelcomeStatusUseCase>(
+    () => CheckWelcomeStatusUseCase(
+      sl(),
+    ),
+  );
+  sl.registerLazySingleton<CompleteOnBoardingWelcomeUseCase>(
+    () => CompleteOnBoardingWelcomeUseCase(
+      sl(),
+    ),
+  );
 
   // blocs
   sl.registerLazySingleton(
@@ -42,11 +58,12 @@ Future<void> initServices() async {
   sl.registerLazySingleton(
     () => NavBarCubit(),
   );
-  // sl.registerLazySingleton(
-  //   () => PostCubit(
-  //     sl(),
-  //   ),
-  // );
+  sl.registerLazySingleton(
+    () => WelcomeCubit(
+      sl(),
+      sl(),
+    ),
+  );
 }
 
 // class _DioService {
@@ -85,8 +102,8 @@ Future<void> initServices() async {
 //   }
 // }
 //
-// class _SharedPreferencesService {
-//   static Future<SharedPreferences> init() async {
-//     return SharedPreferences.getInstance();
-//   }
-// }
+class _SharedPreferencesService {
+  static Future<SharedPreferences> init() async {
+    return SharedPreferences.getInstance();
+  }
+}

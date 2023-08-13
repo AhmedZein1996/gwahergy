@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gwahergy/welcome/presentation/blocs/welcome/welcome_cubit.dart';
 
 import '../../../core/managers/color_manager.dart';
 import '../../../core/managers/route_manager.dart';
@@ -10,7 +12,7 @@ class WelcomeRoundedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  SizedBox(
+    return SizedBox(
       height: 56.h,
       width: 140.w,
       child: TextButton(
@@ -18,6 +20,7 @@ class WelcomeRoundedButton extends StatelessWidget {
           Navigator.of(context).pushReplacementNamed(
             Routes.home,
           );
+          context.read<WelcomeCubit>().completeOnBoardingWelcome();
         },
         style: TextButton.styleFrom(
           backgroundColor: ColorManager.primary,

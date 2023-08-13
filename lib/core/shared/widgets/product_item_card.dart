@@ -12,6 +12,8 @@ class ProductItemCard extends StatelessWidget {
   final ProductEntity product;
   final List<ProductEntity> allProducts;
   final EdgeInsets? margin;
+  final double width;
+  final double height;
   final bool fromDetails;
 
   const ProductItemCard({
@@ -20,6 +22,8 @@ class ProductItemCard extends StatelessWidget {
     required this.allProducts,
     this.fromDetails = false,
     this.margin,
+    this.width = 120,
+    this.height = 90,
     super.key,
   });
 
@@ -59,8 +63,8 @@ class ProductItemCard extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(
-                width: 145.w,
-                height: 120.h,
+                width: width.w,
+                height: height.h,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(
                     20.r,
@@ -72,11 +76,11 @@ class ProductItemCard extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 10.h,
+                height: 8.h,
               ),
               SizedBox(
                 height: 30.h,
-                width: 155.w,
+                width: width.w,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -93,11 +97,10 @@ class ProductItemCard extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 10.h,
+                height: 5.h,
               ),
               SizedBox(
-                height: 24.h,
-                width: 155.w,
+                width: width.w,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -107,6 +110,8 @@ class ProductItemCard extends StatelessWidget {
                     ),
                     Text(
                       '${product.price} LE',
+                      textDirection: TextDirection.ltr,
+                      overflow: TextOverflow.ellipsis,
                       style: TextStyleManager.black_16,
                     ),
                   ],

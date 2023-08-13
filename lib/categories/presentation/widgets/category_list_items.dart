@@ -21,6 +21,7 @@ class CategoryListItems extends StatelessWidget {
       products: products,
       child: HorizontalListItems(
         allProducts: products,
+        //     color: ColorManager.productItemCard,
       ),
     );
   }

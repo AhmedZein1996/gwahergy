@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gwahergy/welcome/presentation/blocs/welcome/welcome_cubit.dart';
+
 import '../../../../core/managers/color_manager.dart';
+import '../../../core/enums/enums.dart';
 import '../../../core/managers/asset_manager.dart';
 import '../../../core/managers/route_manager.dart';
 import '../blocs/splash/splash_cubit.dart';
@@ -12,15 +16,35 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocListener<SplashCubit, SplashState>(
-      listenWhen: (previous, current) {
-        return previous != current;
-      },
-      listener: (context, state) {
-        if (state.splashEnded) {
-          Navigator.of(context).pushReplacementNamed(Routes.welcome);
-        }
-      },
+    return MultiBlocListener(
+      listeners: [
+        BlocListener<SplashCubit, SplashState>(
+          listenWhen: (previous, current) {
+            return previous != current;
+          },
+          listener: (context, state) {
+            if (state.splashEnded) {
+              context.read<WelcomeCubit>().checkWelcomeStatus();
+            }
+          },
+        ),
+        BlocListener<WelcomeCubit, WelcomeState>(
+          listenWhen: (previous, current) {
+            return previous.checkWelcomeStatus != current.checkWelcomeStatus;
+          },
+          listener: (context, state) {
+            if (state.checkWelcomeStatus == RequestState.success) {
+              Navigator.of(context).pushReplacementNamed(
+                Routes.home,
+              );
+            } else if (state.checkWelcomeStatus == RequestState.error) {
+              Navigator.of(context).pushReplacementNamed(
+                Routes.welcome,
+              );
+            }
+          },
+        ),
+      ],
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.transparent,
@@ -34,9 +58,9 @@ class SplashScreen extends StatelessWidget {
         backgroundColor: ColorManager.white,
         body: Center(
           child: SizedBox(
-            child: Image.asset(
-              ImageManager.appIcon,
-              height: .20.sh,
+            child: SvgPicture.asset(
+              ImageManager.taherAppLogo,
+              width: .5.sw,
             ),
           ),
         ),

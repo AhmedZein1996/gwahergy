@@ -32,12 +32,16 @@ class CurrencyScreen extends StatelessWidget {
                 ),
                 const CurrencyExchangeCard(
                   title: 'الدولار',
+                  currency: '1 USD',
+                  price: ' 30.9 EGP',
                 ),
                 SizedBox(
                   height: 25.h,
                 ),
                 const CurrencyExchangeCard(
                   title: 'اليورو',
+                  currency: '1 Eur',
+                  price: '34.2 EGP',
                 ),
               ],
             ),

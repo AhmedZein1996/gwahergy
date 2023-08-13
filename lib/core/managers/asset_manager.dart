@@ -3,9 +3,12 @@ const String _imagesPath = '$_assetsPath/images';
 const String _iconsPath = '$_assetsPath/icons';
 
 class ImageManager {
-  static const String appIcon = '$_imagesPath/app_icon.png';
-  static const String homeLogo = '$_imagesPath/home_logo.svg';
-  static const String welcomeLogoSvg = '$_imagesPath/welcome_logo.svg';
+  static const String gwahergyAppLogo = '$_imagesPath/gwahergy_app_logo.svg';
+  static const String taherAppLogo = '$_imagesPath/taher_app_logo.svg';
+  static const String gwahergyHomeLogo = '$_imagesPath/home_logo.svg';
+  static const String gwahergyWelcomeLogo = '$_imagesPath/welcome_logo.svg';
+  static const String taherHomeLogo = '$_imagesPath/home_taher_logo.svg';
+  static const String taherWelcomeLogo = '$_imagesPath/welcome_taher_logo.svg';
   static const String welcomeTopLeftImage =
       '$_imagesPath/welcome_top_left_image.svg';
   static const String welcomeCenterImage =
