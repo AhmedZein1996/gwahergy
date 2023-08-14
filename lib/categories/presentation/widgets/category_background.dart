@@ -10,12 +10,14 @@ class CategoryBackground extends StatelessWidget {
   final Widget child;
   final String title;
   final List<ProductEntity> products;
+  final Color color;
 
   const CategoryBackground({
     super.key,
     required this.title,
     required this.child,
     required this.products,
+    required this.color,
   });
 
   @override
@@ -23,7 +25,7 @@ class CategoryBackground extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(right: 15.w),
       child: Card(
-        //  color: ColorManager.productItemCard,
+        color: color,
         elevation: 8,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(

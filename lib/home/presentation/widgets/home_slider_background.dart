@@ -3,7 +3,6 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
 class HomeSliderBackground extends StatelessWidget {
   const HomeSliderBackground({
     super.key,
@@ -12,7 +11,7 @@ class HomeSliderBackground extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Transform.rotate(
-      angle: 3.1,
+      angle: 3.115,
       child: ClipRRect(
         borderRadius: BorderRadius.all(
           Radius.circular(
@@ -31,8 +30,7 @@ class HomeSliderBackground extends StatelessWidget {
             ),
           ),
           child: BackdropFilter(
-            filter:
-            ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
+            filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
             child: Container(
               width: 1.sw,
             ),

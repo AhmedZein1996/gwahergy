@@ -22,7 +22,7 @@ class ProductItemCard extends StatelessWidget {
     required this.allProducts,
     this.fromDetails = false,
     this.margin,
-    this.width = 120,
+    this.width = 125,
     this.height = 90,
     super.key,
   });
@@ -64,7 +64,7 @@ class ProductItemCard extends StatelessWidget {
             children: [
               SizedBox(
                 width: width.w,
-                height: height.h,
+                height: height,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(
                     20.r,
@@ -75,29 +75,31 @@ class ProductItemCard extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
-                height: 8.h,
+              const SizedBox(
+                height: 10,
               ),
               SizedBox(
-                height: 30.h,
+                height: 30,
                 width: width.w,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       product.title,
-                      style: TextStyleManager.black_20BOLD.copyWith(
+                      style: TextStyleManager.black_18BOLD.copyWith(
                         fontWeight: FontWeight.w400,
                       ),
                     ),
                     SvgPicture.asset(
-                      IconManager.popular,
+                      IconManager.favorite,
+                      width: 20,
+                      height: 20,
                     ),
                   ],
                 ),
               ),
-              SizedBox(
-                height: 5.h,
+              const SizedBox(
+                height: 10,
               ),
               SizedBox(
                 width: width.w,
@@ -106,13 +108,13 @@ class ProductItemCard extends StatelessWidget {
                   children: [
                     Text(
                       '${product.weight}جرام',
-                      style: TextStyleManager.black_16,
+                      style: TextStyleManager.black_14,
                     ),
                     Text(
                       '${product.price} LE',
                       textDirection: TextDirection.ltr,
                       overflow: TextOverflow.ellipsis,
-                      style: TextStyleManager.black_16,
+                      style: TextStyleManager.black_14,
                     ),
                   ],
                 ),

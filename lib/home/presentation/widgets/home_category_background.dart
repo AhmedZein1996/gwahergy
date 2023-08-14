@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../core/managers/route_manager.dart';
+
 class HomeCategoryBackground extends StatelessWidget {
   final String imagePath;
   final double padding;
@@ -43,12 +45,20 @@ class HomeCategoryBackground extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                 )
-              : SizedBox(
-                  width: 1.sw,
-                  height: height.h,
-                  child: Image.asset(
-                    imagePath,
-                    fit: BoxFit.cover,
+              : InkWell(
+                  onTap: () {
+                    Navigator.of(context).pushNamed(
+                      Routes.imagePreview,
+                      arguments: imagePath,
+                    );
+                  },
+                  child: SizedBox(
+                    width: 1.sw,
+                    height: height.h,
+                    child: Image.asset(
+                      imagePath,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
         ),

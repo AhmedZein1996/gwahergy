@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gwahergy/categories/presentation/screens/categories_screen.dart';
 import 'package:gwahergy/categories/presentation/screens/category_products.dart';
+import 'package:gwahergy/core/shared/widgets/image_preview.dart';
 import 'package:gwahergy/currency/presentation/screens/currency_screen.dart';
 import 'package:gwahergy/favorites/presentation/screens/favorite_products_screen.dart';
 import 'package:gwahergy/home/domain/entities/product/product_entity.dart';
@@ -31,6 +32,7 @@ class Routes {
   static const String search = '/search';
   static const String productDetails = '/productDetails';
   static const String favorites = '/favorites';
+  static const String imagePreview = '/imagePreview';
 }
 
 class RouteGenerator {
@@ -108,6 +110,14 @@ class RouteGenerator {
         return MaterialPageRoute(
           builder: (_) {
             return const FavoriteProductsScreen();
+          },
+        );
+      case Routes.imagePreview:
+        return MaterialPageRoute(
+          builder: (_) {
+            return ImagePreview(
+              imgPath: settings.arguments as String,
+            );
           },
         );
     }

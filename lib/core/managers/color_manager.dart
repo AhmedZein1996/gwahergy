@@ -28,5 +28,6 @@ class ColorManager {
   static const socialBackground = Color(0xFFECECEC);
   static const profileSubtitle = Color(0xFF7A869A);
   static const rectangleCard = Color(0xFFFFFFBF);
-  static const productItemCard = Color(0xFFFFF895);
+  static const productItemCard = Color(0xFFFFF9D7);
+  static const listItemsBackground = Color(0xFFFFF7CC);
 }

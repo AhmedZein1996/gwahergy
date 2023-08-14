@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:gwahergy/core/managers/color_manager.dart';
 
 import '../../../categories/domain/entities/categories_entity.dart';
 import '../../../categories/presentation/widgets/category_list_items.dart';
@@ -48,21 +49,26 @@ class HomeScreen extends StatelessWidget {
                     height: 25.h,
                   ),
                   CategoryListItems(
-                    title: 'غوايش',
-                    products: categories.bracelets,
+                    title: 'خواتم',
+                    cardItemBackground: ColorManager.productItemCard,
+                    listItemsBackground: ColorManager.listItemsBackground,
+                    products: categories.rings,
                   ),
                   SizedBox(
                     height: 10.h,
                   ),
                   CategoryListItems(
-                    title: 'سبايك',
-                    products: categories.bars,
+                    title: 'غوايش',
+                    products: categories.bracelets,
                   ),
+
                   SizedBox(
                     height: 10.h,
                   ),
                   CategoryListItems(
                     title: 'سلاسل',
+                    cardItemBackground: ColorManager.productItemCard,
+                    listItemsBackground: ColorManager.listItemsBackground,
                     products: categories.necklaces,
                   ),
                   SizedBox(
@@ -76,9 +82,12 @@ class HomeScreen extends StatelessWidget {
                     height: 10.h,
                   ),
                   CategoryListItems(
-                    title: 'خواتم',
-                    products: categories.rings,
+                    title: 'سبايك',
+                    cardItemBackground: ColorManager.productItemCard,
+                    listItemsBackground: ColorManager.listItemsBackground,
+                    products: categories.bars,
                   ),
+
                   // HomeCategoryWidget(
                   //   categoryTitle: 'خواتم',
                   //   categoryBackgroundLines:

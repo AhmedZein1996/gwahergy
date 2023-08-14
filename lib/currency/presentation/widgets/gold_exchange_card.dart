@@ -50,12 +50,12 @@ class GoldExchangeCard extends StatelessWidget {
                   Column(
                     children: [
                       Image.asset(
-                        ImageManager.karat_18,
+                        ImageManager.karat_24,
                         width: 60,
                         height: 60,
                       ),
                       Text(
-                        '2258 LE',
+                        '2611 LE',
                         style: TextStyleManager.black_18,
                       ),
                     ],
@@ -68,7 +68,7 @@ class GoldExchangeCard extends StatelessWidget {
                         height: 60,
                       ),
                       Text(
-                        '2635 LE',
+                        '2285 LE',
                         style: TextStyleManager.black_18,
                       ),
                     ],
@@ -76,16 +76,16 @@ class GoldExchangeCard extends StatelessWidget {
                   Column(
                     children: [
                       Image.asset(
-                        ImageManager.karat_24,
+                        ImageManager.karat_18,
                         width: 60,
                         height: 60,
                       ),
                       Text(
-                        '3011 LE',
+                        '1959 LE',
                         style: TextStyleManager.black_18,
                       ),
                     ],
-                  )
+                  ),
                 ],
               ),
             ),

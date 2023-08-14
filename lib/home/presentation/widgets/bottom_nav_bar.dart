@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gwahergy/core/managers/asset_manager.dart';
+
 import '../../../core/shared/blocs/nav_bar/nav_bar_cubit.dart';
 
 class BottomNavBar extends StatelessWidget {
@@ -31,7 +32,7 @@ class BottomNavBar extends StatelessWidget {
               IconManager.home,
             ),
             SvgPicture.asset(
-              IconManager.popular,
+              IconManager.latestProducts,
             ),
           ],
           onTap: (index) {

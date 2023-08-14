@@ -45,7 +45,7 @@ class CategoryProducts extends StatelessWidget {
             child: GridView.builder(
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                childAspectRatio: .85,
+                childAspectRatio: .81,
                 crossAxisSpacing: 10,
                 mainAxisSpacing: 20,
               ),
@@ -53,6 +53,8 @@ class CategoryProducts extends StatelessWidget {
               itemBuilder: (context, index) {
                 return ProductItemCard(
                   allProducts: products,
+                  width: 150,
+                  height: 120,
                   product: products[index],
                 );
               },

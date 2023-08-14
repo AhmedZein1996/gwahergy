@@ -57,7 +57,7 @@ class ProductDetailsScreen extends StatelessWidget {
               HorizontalListItems(
                 allProducts: allProducts,
                 product: product,
-                color: ColorManager.productItemCard,
+                color: ColorManager.rectangleCard,
               ),
             ],
           ),

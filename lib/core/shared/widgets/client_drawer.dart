@@ -37,20 +37,20 @@ class ClientDrawer extends StatelessWidget {
                   style: TextStyleManager.darkBlue_24BOLD,
                 ),
                 ListTile(
-                  title: const Text('خد لفة'),
+                  title: const Text('البحث'),
                   leading: SvgPicture.asset(
-                    IconManager.categories,
+                    IconManager.search,
                     width: 35.w,
                     height: 35.h,
                   ),
                   onTap: () {
-                    Navigator.of(context).pushNamed(Routes.categories);
+                    Navigator.of(context).pushNamed(Routes.search);
                   },
                 ),
                 ListTile(
                   title: const Text('المفضلة'),
                   leading: SvgPicture.asset(
-                    IconManager.popularBlack,
+                    IconManager.favoriteBlack,
                     width: 35.w,
                     height: 35.h,
                   ),

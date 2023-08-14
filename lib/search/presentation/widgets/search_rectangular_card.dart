@@ -67,7 +67,7 @@ class SearchRectangularCard extends StatelessWidget {
               Column(
                 children: [
                   SvgPicture.asset(
-                    IconManager.popular,
+                    IconManager.favorite,
                   ),
                   SizedBox(
                     height: 8.h,

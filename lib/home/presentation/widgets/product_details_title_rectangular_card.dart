@@ -44,7 +44,7 @@ class ProductDetailsTitleRectangularCard extends StatelessWidget {
                     ),
                   ),
                   SvgPicture.asset(
-                    IconManager.popular,
+                    IconManager.favorite,
                   ),
                 ],
               ),

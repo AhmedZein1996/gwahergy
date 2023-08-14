@@ -29,7 +29,7 @@ class HorizontalListItems extends StatelessWidget {
           .toList();
     }
     return SizedBox(
-      height: 195,
+      height: 210,
       child: ListView.separated(
         padding: const EdgeInsets.symmetric(
           horizontal: AppPadding.screenBodyPadding,

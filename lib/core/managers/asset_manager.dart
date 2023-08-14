@@ -57,9 +57,10 @@ class IconManager {
   static const String arrowRight = '$_iconsPath/arrow_right.svg';
   static const String filter = '$_iconsPath/filter.svg';
   static const String home = '$_iconsPath/home_icon.svg';
-  static const String popular = '$_iconsPath/popular_icon.svg';
-  static const String popularBlack = '$_iconsPath/popular_black.svg';
   static const String blog = '$_iconsPath/blog_icon.svg';
+  static const String latestProducts = '$_iconsPath/latest_products.svg';
+  static const String favorite = '$_iconsPath/popular_icon.svg';
+  static const String favoriteBlack = '$_iconsPath/popular_black.svg';
   static const String searchPng = '$_iconsPath/search_icon.png';
   static const String blogBlack = '$_iconsPath/blog_black.svg';
   static const String categories = '$_iconsPath/categories.svg';
